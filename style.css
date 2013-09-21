@@ -177,6 +177,7 @@ only screen and (min-device-pixel-ratio: 2) {
 .article-content li {line-height:24px; padding:5px 0;}
 .article-content a {color:#999;}
 .article-content a:hover {color:#333; text-decoration:underline;}
+.article-content code {background:#F2F2F2; padding:2px 5px; border:1px solid #DDD; border-radius:3px; margin:0 5px;}
 .article-foot {padding:30px; line-height:30px; text-align:center; text-transform:uppercase;}
 .go-top {display:inline-block; color:#333;}
 .go-top:hover {color:black;}
