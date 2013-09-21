@@ -2,7 +2,7 @@
 
 这是一款全站AJAX的主题，支持Retina。
 
-下载主题：[Github][2] 最佳效果：@[Evacuee][3]
+最佳效果：@[Evacuee][3]
 
 **使用本主题必须安装 [JSON API][4]（数据输出） 以及 [wp slug translate][5]（可以替换为同类插件） 这两个插件。**  
 **不可以使用 WP No Category Base 插件，暂不支持其他任何评论插件**
