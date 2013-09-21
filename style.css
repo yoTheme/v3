@@ -171,7 +171,7 @@ only screen and (min-device-pixel-ratio: 2) {
 .article-info:after {position:absolute; top:-7px; right:34px; display:inline-block; border-right:7px solid transparent; border-bottom:7px solid rgba(0,0,0,0.8); border-left:7px solid transparent; content:'';}
 .article-content {background:#F9F9F9; font-size:14px; overflow:hidden;}
 .article-content p {text-indent:2em; padding:15px 25px; line-height:24px;}
-.full-img {padding:0!important; text-indent:0!important;}
+.full-img {padding:0!important; text-indent:0!important; margin-bottom:20px;}
 .full-img img {width:100%!important; display:block;}
 .article-content ol {list-style:decimal; margin-left:75px;}
 .article-content li {line-height:24px; padding:5px 0;}

@@ -440,10 +440,10 @@ $(function() {
                             var $ac = $(".article-content");
                             $ac.hide();
                             $ac.html(_content);
-                            //var $fimg = $ac.find("img");
-                            //$fimg.parents("p:not(.full-img)").addClass("full-img");
-                            //$fimg.removeAttr("width");
-                            //$fimg.removeAttr("height");
+                            var $fimg = $ac.find("img");
+                            $fimg.parents("p:not(.full-img)").addClass("full-img");
+                            $fimg.removeAttr("width");
+                            $fimg.removeAttr("height");
                             $ac.show();
                             $(".comments-title span").html("Comments（"+_comCount+"）");
                             //console.log(_comStatus);
