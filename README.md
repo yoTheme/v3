@@ -1,3 +1,5 @@
+![主题截图](http://youed.me/wp-content/themes/yotheme_v3/screenshot.png)
+
 这是一款全站AJAX的主题，支持Retina。
 
 下载主题：[Github][2] 最佳效果：@[Evacuee][3]
