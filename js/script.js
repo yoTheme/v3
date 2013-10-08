@@ -661,21 +661,22 @@ $(function() {
                         htm += '<div class="item-pic">';
                         var _pic = _post[i].attachments;
                         var _custom = _post[i].custom_fields; //获取自定义字段
-                        if (_pic.length!==0) {
-                            if (i==0&&!re) {
-                                htm += '<img src="'+_pic[0].images.full.url+'"';
-                            } else {
-                                htm += '<img src="'+_pic[0].images.medium.url+'"';
-                            }
+                        var _img;
+                        var _topic = _custom.topic;
+                        if (typeof(_topic)!=='undefined') {
+                            _img = _custom.topic[0];
                         } else {
-                            if (_custom.length!==0) {
-                                if (_custom.topic) {
-                                    htm += '<img src="'+_custom.topic[0]+'"';
+                            if (_pic.length!==0) {
+                               if (i==0&&!re) {
+                                    _img = _pic[0].images.full.url;
                                 } else {
-                                    htm += '<img src="'+themeUrl+'images/nopic.jpg"';
+                                    _img = _pic[0].images.medium.url;
                                 }
+                            } else {
+                                _img = themeUrl+"images/nopic.jpg";
                             }
                         }
+                        htm += '<img src="'+_img+'"';
                         htm += ' alt="'+_post[i].title+'" />';
                         htm += '</div>';
                         htm += '<div class="item-comment">';
