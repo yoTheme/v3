@@ -728,7 +728,8 @@ $(function() {
                     //console.log(_items*aw+","+as*(_items-1)+","+faw);
                     //console.log(parseInt(_totalW));
                     var x, navi = "";
-                    for (x=1;x<parseInt(_totalW/alw)+2;x++) {
+                    var _px = parseInt(_totalW/alw)+2;
+                    for (x=1;x<_px;x++) {
                         navi += '<a href="javascript:;" class="scroll-screen'
                         if (x==1) {
                             navi += ' first-screen';
