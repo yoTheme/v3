@@ -664,7 +664,7 @@ $(function() {
                         var _img;
                         var _topic = _custom.topic;
                         if (typeof(_topic)!=='undefined') {
-                            _img = _custom.topic[0];
+                            _img = _topic[0];
                         } else {
                             if (_pic.length!==0) {
                                if (i==0&&!re) {
