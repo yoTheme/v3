@@ -7,6 +7,7 @@ $(function() {
     var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
     //var baseUrl = "http://www.mirageyard.com/"; //默认网站地址
     //var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
+    var getUrl = window.location.href; //获取网址
     var encode = false; //如果使用英文别名，则设置为 true
     var per = 10; //每页文章数量
     var alw = ww - 40; //减去左边距之后的列表宽度（滚动一屏的宽度）
@@ -130,6 +131,14 @@ $(function() {
     //初始化
     baseLayout();
     articleLayout(false, per, 1);
+    //打开外部链接而来的文章
+    var su = getUrl.split("/")[3]; //获取URL参数
+    if (su) {
+        if (su=="category") { //排除分类页面
+        } else {
+            loadSingleArticle('post', su);
+        }
+    }
     //loadSingleArticle('post', 'the-new-theme-release-yotheme-v2-0');
     //创建基础布局
     function baseLayout() {
