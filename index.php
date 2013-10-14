@@ -37,7 +37,6 @@
                             <div class="comment-input">
                                 <textarea id="com_content" placeholder="说点儿什么吧？"></textarea>
                             </div>
-                            <input type="hidden" id="post_id" value="" />
                             <input type="hidden" id="parent_id" value="" />
                         </div>
                         <div class="comment-submit">

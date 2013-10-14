@@ -3,7 +3,7 @@ $(function() {
     var $w = $(window); //窗体DOM
     var wh = parseInt($w.height()); //窗口高度
     var ww = parseInt($w.width()); //窗口宽度
-    var baseUrl = "http://youed.me/"; //默认网站地址
+    var baseUrl = "http://localhost/"; //默认网站地址
     var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
     //var baseUrl = "http://www.mirageyard.com/"; //默认网站地址
     //var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
@@ -170,8 +170,6 @@ $(function() {
     }
     //文章加载完成后执行
     function afterArticleLoad() {
-        var _aid = $("#article").attr("data-id");
-        $("#post_id").val(_aid);
         //发表评论
         $(".post-comment").click(function(event) {
             var $forms = $(".comment-post-wrapper");
@@ -184,6 +182,7 @@ $(function() {
                 var _content = $("#com_content").val();
                 var _email = $("#com_email").val();
                 var _pid = $("#parent_id").val();
+                var _aid = $("#article").attr("data-id");
                 //验证数据完整
                 if (!_name) {
                     tips('tips', 'show', '雁过留声，人过留名！无名氏阁下。');
@@ -203,6 +202,8 @@ $(function() {
                     tips('tips', 'show', '哈！啥也不填也想评论？别说门了，窗都没有！');
                     return false;
                 }
+                console.log(_aid);
+                event.stopImmediatePropagation(); //阻止事件冒泡
                 //提交数据
                 $.ajax({
                     type: "POST",
@@ -249,7 +250,7 @@ $(function() {
                     }
                 });
             }
-            event.stopImmediatePropagation(); //阻止事件冒泡
+            
         });
         $(".reply").click(function(event) {
             var $s = $(this);
