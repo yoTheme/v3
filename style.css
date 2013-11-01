@@ -34,7 +34,7 @@ only screen and (min-device-pixel-ratio: 2) {
     .load-more a {background-image:url(images/more@2x.png); background-repeat:no-repeat; background-size:160px 135px;}
     #s {background-image:url(images/search_icon@2x.png); background-repeat:no-repeat; background-size:56px 60px;}
     .logo a {background-image:url(images/logo@2x.png); background-repeat:no-repeat; background-size:300px 50px;}
-    #page_loading {background:#D8D8D8 url(images/indexbg@2x.jpg) center center no-repeat; background-size:1280px 800px;}
+    #page_loading {background:#D8D8D8 url(images/indexbg@2x.jpg) center center no-repeat; background-size:1226px 800px;}
 }
 
 #tips, #loading, #page_loading {position:fixed; top:0; left:0; width:100%; height:100%; display:none;}

@@ -3,7 +3,7 @@ $(function() {
     var $w = $(window); //窗体DOM
     var wh = parseInt($w.height()); //窗口高度
     var ww = parseInt($w.width()); //窗口宽度
-    var baseUrl = "http://localhost/"; //默认网站地址
+    var baseUrl = "http://youed.me/"; //默认网站地址
     var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
     //var baseUrl = "http://www.mirageyard.com/"; //默认网站地址
     //var themeUrl = baseUrl+"wp-content/themes/yotheme_v3/"; //主题地址
@@ -14,14 +14,14 @@ $(function() {
     var hh = 120; //头部高度
     var fh = 50; //尾部高度
     var bh = wh - hh - fh; //主体部分高度(最大920，最小350)
-    if (bh>920) {
-        bh = 920;
+    if (bh>1600) {
+        bh = 1600;
     } else if (bh<350) {
         bh = 350;
     }
     var faw = bh*1.5; //第一篇文章的宽度
-    if (faw>1226) {
-        faw = 1226;
+    if (faw>2400) {
+        faw = 2400;
     } else if (faw<466) {
         faw = 466;
     }
@@ -202,7 +202,7 @@ $(function() {
                     tips('tips', 'show', '哈！啥也不填也想评论？别说门了，窗都没有！');
                     return false;
                 }
-                console.log(_aid);
+                //console.log(_aid);
                 event.stopImmediatePropagation(); //阻止事件冒泡
                 //提交数据
                 $.ajax({
