@@ -209,7 +209,7 @@ $(function() {
                     type: "POST",
                     url: "/api/respond/submit_comment/",
                     data: {post_id:_aid, parent:_pid, email:_email, name:_name, url:_url, content:_content},
-                    timeout: 30000,
+                    timeout: 300000,
                     beforeSend: function() {
                         //显示 Loading
                         tips('loading','show');
@@ -374,7 +374,7 @@ $(function() {
                 //url: "data/article-271.json",
                 url: "/api/get_"+type+"/",
                 data: {slug:slug},
-                timeout: 30000,
+                timeout: 300000,
                 beforeSend: function() {
                     //显示 Loading
                     tips('loading','show');
@@ -609,7 +609,7 @@ $(function() {
             //url: "data/articles-p1.json",
             url: url,
             data: {count:num, page:p, slug:catslug},
-            timeout: 30000,
+            timeout: 300000,
             beforeSend: function() {
                 //显示Loading
                 tips('ploading','show');
